@@ -30,6 +30,7 @@ def start_game():
     ( You can add more features/enhancements if you'd like to. )
     """
     # write your code inside this function.
+    print("Hello, World")
 
 
 

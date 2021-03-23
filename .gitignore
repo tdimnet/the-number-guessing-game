@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # My own stuff
-Vscode
+.devcontainer
 Dockerfile
