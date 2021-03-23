@@ -30,7 +30,13 @@ def start_game():
     ( You can add more features/enhancements if you'd like to. )
     """
     # write your code inside this function.
-    print("Hello, World")
+    print("------------------------------------")
+    print("Welcome to the Number Guessing Game!")
+    print("------------------------------------")
+
+    number_proposal = int(input("Pick a number between 1 and 10: "))
+
+    print("You have picked {}".format(number_proposal))
 
 
 
