@@ -71,15 +71,19 @@ def main():
 
       if is_playing == 'y':
         if high_score != 0:
-
           print("High score {}".format(high_score))
           game_score = start_game()
 
+          print("====")
+          print(game_score)
+          print("====")
+          print("====")
+          print(high_score)
+          print("====")
+
           if game_score < high_score:
             high_score = game_score
-
         is_playing = True
-        
       elif is_playing == 'n':
         is_playing = False
       else:
