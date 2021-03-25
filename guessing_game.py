@@ -16,26 +16,24 @@ def start_game():
   random_number = random.randint(1, 10)
   number_proposal = 0
   number_of_attempts = 0
-
-  print("======")
-  print("random_number", random_number)
-  print("======")
-  print("======")
-  print("number_proposal", number_proposal)
-  print("======")
   
   while random_number != number_proposal:
-    number_proposal = int(input("Pick a number between 1 and 10: "))
 
-    if number_proposal < 1 or number_proposal > 10:
-      print("Please pick a number between 1 and 10")
-    else:
-      if number_proposal < random_number:
-        print("It is higher")
-      elif number_proposal > random_number:
-        print("It is lower")
+    try:
+      number_proposal = int(input("Pick a number between 1 and 10: "))
+      
+      if number_proposal < 1 or number_proposal > 10:
+        print("Please pick a number between 1 and 10")
+      else:
+        if number_proposal < random_number:
+          print("It is higher")
+        elif number_proposal > random_number:
+          print("It is lower")
 
-      number_of_attempts += 1
+        number_of_attempts += 1
+
+    except ValueError:
+      print("Incorrect value type, this program needs a number to work")
   
   print("Got it! It took you {} tries to find out the correct answer".format(number_of_attempts))
   return number_of_attempts
@@ -73,14 +71,6 @@ def main():
         if high_score != 0:
           print("High score {}".format(high_score))
           game_score = start_game()
-
-          print("====")
-          print(game_score)
-          print("====")
-          print("====")
-          print(high_score)
-          print("====")
-
           if game_score < high_score:
             high_score = game_score
         is_playing = True
