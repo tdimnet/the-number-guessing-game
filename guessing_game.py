@@ -79,6 +79,7 @@ def main():
       else:
         print("Incorrect input")
 
+    print("Closing game, see you next time!")
 
 # Kick off the program by calling the start_game function.
 main()
